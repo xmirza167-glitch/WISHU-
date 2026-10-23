@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Wishu 💗</title>
+<style>
+:root{--pink:#ff6fae;--rose:#ffb6d2;--cream:#fff8fb;--plum:#66334f}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--plum);overflow:hidden;background:linear-gradient(135deg,#fff1f7,#ffe0ed 45%,#f8e8ff);display:grid;place-items:center}
+body:before,body:after{content:"";position:fixed;width:280px;height:280px;border-radius:50%;filter:blur(4px);opacity:.45;z-index:-1;animation:float 8s ease-in-out infinite alternate}
+body:before{background:#ffc4dc;top:-90px;left:-70px}body:after{background:#d9c4ff;bottom:-100px;right:-60px;animation-delay:-4s}
+@keyframes float{to{transform:translate(45px,35px) scale(1.15)}}
+.heart{position:fixed;bottom:-30px;opacity:.45;animation:rise linear infinite;pointer-events:none}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.card{width:min(92vw,510px);min-height:530px;padding:clamp(25px,6vw,42px);border:1px solid #fff;background:rgba(255,255,255,.76);backdrop-filter:blur(15px);border-radius:30px;box-shadow:0 22px 70px #a64e7730;text-align:center;position:relative;overflow:hidden;animation:appear .7s cubic-bezier(.2,.8,.2,1)}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.page{display:none;min-height:445px;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.page.active{display:flex;animation:appear .6s ease}
+.kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#c15b8a}
+h1{font-size:clamp(2rem,8vw,3rem);line-height:1.08;margin:0;color:#b83f78}
+h2{font-size:clamp(1.55rem,6vw,2.15rem);margin:0;color:#b83f78}
+p{font-size:1.04rem;line-height:1.75;margin:0}
+.big-heart{font-size:4.2rem;filter:drop-shadow(0 8px 10px #ff91bc55);animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.12)}}
+.buttons{width:100%;display:flex;align-items:center;justify-content:center;gap:15px;min-height:70px;position:relative;margin-top:5px}
+button{font:inherit;font-weight:750;border:0;border-radius:999px;padding:13px 27px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px)}
+.yes,.next{color:white;background:linear-gradient(135deg,#ff72ad,#d94c91);box-shadow:0 9px 22px #e75c9a45}
+.no{background:#fff0f6;color:#a43d70;border:1px solid #f4bdd4;position:relative;z-index:2}
+.note{font-size:.82rem;color:#a86c88}
+.signature{margin-top:8px;font-weight:800;color:#b83f78}
+.bubble{background:#fff5fa;border:1px solid #ffe0ed;border-radius:18px;padding:15px 18px;text-align:left;width:100%}
+.bubble p{font-size:.97rem}
+.next{margin-top:8px;min-width:145px}
+.sparkle{position:absolute;top:18px;right:23px;font-size:1.4rem;animation:spin 7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.final-message{font-size:1.15rem}
+.small{font-size:.9rem;color:#a86c88}
+@media(max-height:680px){body{overflow:auto;padding:12px}.card{min-height:0}.page{min-height:440px}}
+</style>
+</head>
+<body>
+<div id="floaties"></div>
+<main class="card">
+  <span class="sparkle">✧</span>
+  <section class="page active" id="page1">
+    <div class="big-heart">💗</div>
+    <div class="kicker">a little question for you</div>
+    <h1>Wishu,</h1>
+    <h2>Do you want to be my girlfriend?</h2>
+    <p>Bas dil se ek chhota sa sawaal hai… 🌷</p>
+    <div class="buttons" id="choiceArea">
+      <button class="yes" id="yesBtn">Yes 💖</button>
+      <button class="no" id="noBtn">No 🙈</button>
+    </div>
+    <div class="note">P.S. Soch samajh kar… lekin dil se jawab dena 😚</div>
+  </section>
+  <section class="page" id="page2">
+    <div class="big-heart">🥹💞</div>
+    <div class="kicker">for my Wishu</div>
+    <h1>Yayyy! 💗</h1>
+    <div class="bubble"><p>Wishu, tumhari smile mere din ko khoobsurat bana sakti hai. Tumse baat ho jaye toh dil halka aur mood acha ho jata hai. 🫶</p></div>
+    <div class="bubble"><p>Main chahta hoon ke hum ek doosre ki khushi, izzat aur sukoon ka sabab banein. Chhoti chhoti baatein, silly jokes aur bohat saari pyari memories saath banayein. 🌸</p></div>
+    <div class="bubble"><p>Koi pressure nahi, bas ek sachcha sa ehsaas hai. Tum mere liye special ho, Wishu. 💌</p></div>
+    <div class="signature">From Mirza ✨</div>
+    <button class="next" data-next="page3">Next →</button>
+  </section>
+  <section class="page" id="page3">
+    <div class="big-heart">🌙💖</div>
+    <div class="kicker">one more thing</div>
+    <h1>Wishu</h1>
+    <p class="final-message">Tumhari zindagi hamesha khushiyon, sukoon aur pyaar se bhari rahe. Tum jab bhi muskurao, tumhare paas muskurane ki koi khoobsurat wajah ho. 🦋</p>
+    <p>Thank you for coming my life 💗</p>
+    <div class="signature">From Mirza</div>
+    <p class="small">Tumhari khushi hamesha important rahegi. 🌷</p>
+    <button class="next" id="againBtn">Read again ↺</button>
+  </section>
+</main>
+<script>
+const pages=[...document.querySelectorAll('.page')];
+function showPage(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));}
+document.getElementById('yesBtn').addEventListener('click',()=>showPage('page2'));
+document.querySelector('[data-next="page3"]').addEventListener('click',()=>showPage('page3'));
+document.getElementById('againBtn').addEventListener('click',()=>showPage('page1'));
+const noBtn=document.getElementById('noBtn'), area=document.getElementById('choiceArea');
+let moves=0;
+noBtn.addEventListener('mouseenter',runAway);
+noBtn.addEventListener('click',runAway);
+noBtn.addEventListener('touchstart',e=>{e.preventDefault();runAway();},{passive:false});
+function runAway(){
+  moves++;
+  const areaRect=area.getBoundingClientRect(), cardRect=document.querySelector('.card').getBoundingClientRect();
+  noBtn.style.position='absolute';
+  const maxX=Math.max(0,areaRect.width-noBtn.offsetWidth);
+  const maxY=90;
+  let x=Math.random()*maxX, y=(Math.random()-.5)*maxY;
+  // Alternate between above, below, and either side so it keeps moving around.
+  const mode=moves%4;
+  if(mode===0){x=0;y=-38}
+  if(mode===1){x=maxX;y=24}
+  if(mode===2){x=Math.random()*maxX;y=-42}
+  if(mode===3){x=Math.random()*maxX;y=35}
+  noBtn.style.left=Math.max(0,Math.min(maxX,x))+'px';
+  noBtn.style.top=y+'px';
+  noBtn.style.transform=`rotate(${Math.random()*18-9}deg)`;
+  noBtn.textContent=['No 🙈','Nope 😝','Are you sure? 🥺','No 🙃'][moves%4];
+}
+for(let i=0;i<18;i++){const el=document.createElement('span');el.className='heart';el.textContent=['♡','♥','✦','💗'][i%4];el.style.left=(Math.random()*100)+'vw';el.style.animationDuration=(7+Math.random()*9)+'s';el.style.animationDelay=(-Math.random()*12)+'s';el.style.fontSize=(14+Math.random()*20)+'px';document.getElementById('floaties').appendChild(el);}
+</script>
+</body>
+</html>
